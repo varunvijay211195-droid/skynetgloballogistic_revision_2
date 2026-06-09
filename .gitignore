@@ -2,3 +2,9 @@ node_modules/
 .env
 *.log
 npm-debug.log*
+/*.png
+/*.pdf
+/*.ico
+capture_all_screenshots.js
+generate_feedback_pdf.js
+generate_proposal.js
