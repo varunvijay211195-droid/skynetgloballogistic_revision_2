@@ -66,28 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
           this.baseHue = 40;  // Gold/Orange
         }
 
-        // Star types: 4-pointed sparkle (5%) and 5-pointed star (4%)
-        const starRoll = Math.random();
-        this.isStar = starRoll < 0.05;
-        this.isFiveStar = !this.isStar && starRoll < 0.09;
+        // No star shapes — all particles are simple circles
+        this.isStar = false;
+        this.isFiveStar = false;
         this.isExploding = false;
-        this.explodeTimer = Math.random() * 300 + 100;
-
-        if (this.isStar) {
-          this.baseHue = 50; // Brilliant Gold for 4-pointed sparkles
-          this.radius *= 2.618; // Stars scaled by Golden Ratio!
-          this.rotation = Math.random() * Math.PI * 2;
-          this.rotationSpeed = (Math.random() - 0.5) * 0.03;
-        }
-
-        if (this.isFiveStar) {
-          // Cyan/blue/purple hues for 5-pointed stars
-          const hues = [190, 220, 262, 280, 300];
-          this.baseHue = hues[Math.floor(Math.random() * hues.length)];
-          this.radius *= 1.8; // Slightly smaller than 4-pointed sparkles
-          this.rotation = Math.random() * Math.PI * 2;
-          this.rotationSpeed = (Math.random() - 0.5) * 0.012; // Slow, dreamlike spin
-        }
 
         this.color = `hsl(${this.baseHue}, 90%, 65%)`;
       }
