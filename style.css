@@ -1708,7 +1708,8 @@ img {
   }
 
   .nav-menu,
-  .nav-actions .btn {
+  .nav-actions .btn,
+  .nav-actions .track-btn {
     display: none;
   }
 
@@ -2911,6 +2912,16 @@ img {
   .chat-window {
     width: 310px;
     height: 420px;
+  }
+
+  .clock-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .clock-status {
+    justify-content: flex-start;
   }
 }
 
